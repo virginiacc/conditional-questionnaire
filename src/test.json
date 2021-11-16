@@ -1,0 +1,219 @@
+{
+	"results": [],
+	"questions": [{
+		"id": "b1ea7582-60f9-4f24-9589-86680255bcc8",
+		"answers": [{
+			"id": "97cc76f2-df0f-40bb-9a69-37d3335c5d5a",
+			"text": "<b>Off track.</b><br/>I’m struggling to afford my payments, I may have missed payments, or my loan may be in default. I want to know my options."
+		}, {
+			"id": "672e2811-dbe0-4424-9dbc-431acc3e98f8",
+			"text": "<b>On track.</b><br/>I have not missed any payments. I know I can afford my payments. I want to ________."
+		}, {
+			"id": "d30bdf98-3d7e-4869-bbd8-a36feec4726a",
+			"text": "<b>Just starting out.</b><br/>My first payment is coming up or I recently started paying. I want to learn more about repaying my student loans."
+		}],
+		"text": "",
+		"condition_block": null,
+		"content_blocks": [{
+			"id": "23da1414-e474-482c-a811-e7083c9d0272",
+			"text": "Where are you with your loans? "
+		}],
+		"type": "radio",
+		"required": true
+	}, {
+		"id": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+		"answers": [{
+			"id": "3ba2d326-9df8-4132-a14f-0b0888adb664",
+			"text": "I have federal student loans for my own education."
+		}, {
+			"id": "20cef6a2-359e-492f-be7e-183886b08958",
+			"text": "I have federal Parent PLUS loans for my child’s education."
+		}, {
+			"id": "8e518905-f91c-48a7-96ca-835aad8b4e13",
+			"text": "I took out a private education loan for my schooling or someone else’s."
+		}, {
+			"id": "92469e3a-d2cc-4d56-b9b2-1b88a9b281c1",
+			"text": "I co-signed someone else’s private education loan."
+		}],
+		"text": "",
+		"condition_block": {
+			"type": "all",
+			"conditions": [{
+				"id": "666d69c8-119b-4be8-a336-fb2a2fa923d8",
+				"type": "exists",
+				"question": "b1ea7582-60f9-4f24-9589-86680255bcc8",
+				"answer": ""
+			}]
+		},
+		"content_blocks": [{
+			"id": "341deadc-a277-42c5-99f7-d889fafb4248",
+			"text": "<p>Student debt can be stressful! Your options depend on the type of loans. What type of student loans do you have?</p>",
+			"condition_block": {
+				"type": "all",
+				"conditions": [{
+					"id": "814db9f4-6f96-468c-9e1e-656fe98c6161",
+					"type": "equals",
+					"question": "b1ea7582-60f9-4f24-9589-86680255bcc8",
+					"answer": "97cc76f2-df0f-40bb-9a69-37d3335c5d5a"
+				}]
+			}
+		}, {
+			"id": "59561501-0a8e-4306-a3ee-292265dc08c8",
+			"text": "<p>Glad it’s going well! You may have ways to improve your strategy for paying off your loans. What type of student loans do you have?</p>",
+			"condition_block": {
+				"type": "all",
+				"conditions": [{
+					"id": "9afe39ce-c393-4427-a8e8-2c9eda4faf2a",
+					"type": "equals",
+					"question": "b1ea7582-60f9-4f24-9589-86680255bcc8",
+					"answer": "672e2811-dbe0-4424-9dbc-431acc3e98f8"
+				}]
+			}
+		}, {
+			"id": "18904719-9693-42a7-b813-c4560945fa8b",
+			"text": "<p>It can be tricky to figure out the student loan strategy that works best for you. Your options will depend on your situation. What type of student loans do you have?</p>",
+			"condition_block": {
+				"type": "all",
+				"conditions": [{
+					"id": "766e89f8-2990-4ffd-abec-0782f53a09d5",
+					"type": "equals",
+					"question": "b1ea7582-60f9-4f24-9589-86680255bcc8",
+					"answer": "d30bdf98-3d7e-4869-bbd8-a36feec4726a"
+				}]
+			}
+		}, {
+			"id": "f0be88be-1a96-48bc-bc33-935a585b2b75",
+			"text": "<p>Not sure? Your free credit report should list all your loans. See more details about your federal loans at www.studentaid.gov.</p><p>Select all that apply</p>"
+		}],
+		"type": "checkbox",
+		"required": true
+	}, {
+		"id": "3936674a-2b62-410a-9045-8a1bd26e2942",
+		"answers": [{
+			"id": "22b2b79e-0267-41f3-b17f-8e8a250520d4",
+			"text": "I have federal loans in default or collections",
+			"condition_block": {
+				"type": "any",
+				"conditions": [{
+					"id": "7700fbf0-3686-4319-b466-9a94be41106d",
+					"type": "equals",
+					"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+					"answer": "3ba2d326-9df8-4132-a14f-0b0888adb664"
+				}, {
+					"id": "83c4ffc6-238d-4cdd-ae68-10aa31241360",
+					"type": "equals",
+					"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+					"answer": "20cef6a2-359e-492f-be7e-183886b08958"
+				}]
+			}
+		}, {
+			"id": "941737d0-ff37-4884-9284-41c7b6c26041",
+			"text": "I have private loans in default or collections.",
+			"condition_block": {
+				"type": "all",
+				"conditions": [{
+					"id": "e40186eb-b4a6-443f-9ce3-0ab6b0739557",
+					"type": "equals",
+					"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+					"answer": "8e518905-f91c-48a7-96ca-835aad8b4e13"
+				}]
+			}
+		}, {
+			"id": "675fca44-52a8-4e1e-ad10-1aeaeebf446f",
+			"text": "The loan I co-signed in default or collections.",
+			"condition_block": {
+				"type": "all",
+				"conditions": [{
+					"id": "7ad64a83-ba1c-4fe4-b628-523a4d98d6c2",
+					"type": "equals",
+					"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+					"answer": "92469e3a-d2cc-4d56-b9b2-1b88a9b281c1"
+				}]
+			}
+		}],
+		"text": "",
+		"condition_block": {
+			"type": "all",
+			"conditions": [{
+				"id": "f15d4fa8-830f-476b-b26c-4ec346b4041b",
+				"type": "equals",
+				"question": "b1ea7582-60f9-4f24-9589-86680255bcc8",
+				"answer": "97cc76f2-df0f-40bb-9a69-37d3335c5d5a"
+			}, {
+				"id": "58fdbc6c-f5dd-4725-8fa2-6cd77c6915a1",
+				"type": "exists",
+				"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+				"answer": ""
+			}]
+		},
+		"content_blocks": [{
+			"id": "c5a08419-08a6-4106-87e2-5611fbfe5789",
+			"text": "<p>Are any of your loans in default?</p>\n<p>Not sure? Your free credit report should list the status of all your loans. See more details about your federal loans at www.studentaid.gov. </p>\n<p>Select all that apply.</p>"
+		}],
+		"type": "checkbox"
+	}, {
+		"id": "eff1d06a-8355-452c-a0d0-1b29856910ed",
+		"answers": [{
+			"id": "f285999b-683e-47b4-af0f-0c4d88938f3b",
+			"text": "I work for a government or non-profit employer. ",
+			"condition_block": {
+				"type": "any",
+				"conditions": [{
+					"id": "4f09cadb-9953-415b-b427-2a61cc6583e6",
+					"type": "equals",
+					"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+					"answer": "3ba2d326-9df8-4132-a14f-0b0888adb664"
+				}, {
+					"id": "09c72a93-3ac7-4a79-81b4-323bcc039555",
+					"type": "equals",
+					"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+					"answer": "20cef6a2-359e-492f-be7e-183886b08958"
+				}],
+				"condition_groups": []
+			}
+		}, {
+			"id": "4c19c6c3-0bb9-4cc7-9652-93386a216096",
+			"text": "I am an active duty servicemember. "
+		}],
+		"text": "",
+		"condition_block": {
+			"type": "all",
+			"conditions": [{
+				"id": "4cb2d8dd-5c98-482d-bc99-ec714666e7f1",
+				"type": "exists",
+				"question": "b1ea7582-60f9-4f24-9589-86680255bcc8",
+				"answer": ""
+			}, {
+				"id": "4b79899a-b343-4c57-bd6b-a86b35178f38",
+				"type": "exists",
+				"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+				"answer": ""
+			}],
+			"condition_groups": [{
+				"id": "1431b57d-409e-4010-87c6-ff25729ec773",
+				"type": "any",
+				"conditions": [{
+					"id": "0644f379-07d4-48b4-89e3-5fbd3b6d703d",
+					"type": "equals",
+					"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+					"answer": "3ba2d326-9df8-4132-a14f-0b0888adb664"
+				}, {
+					"id": "768afdb9-e062-4faf-ad75-a2cbaed4c620",
+					"type": "equals",
+					"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+					"answer": "20cef6a2-359e-492f-be7e-183886b08958"
+				}, {
+					"id": "43a33e32-9192-4bfc-ba9f-dcb643b3231a",
+					"type": "equals",
+					"question": "6e1e65bd-33fd-4a37-a352-cc5d7d2f8f1c",
+					"answer": "8e518905-f91c-48a7-96ca-835aad8b4e13"
+				}]
+			}]
+		},
+		"content_blocks": [{
+			"id": "05c879ae-3336-4184-a95d-aa3ca34e65d3",
+			"text": "To get advice tailored to your situation, select all that apply. "
+		}],
+		"type": "checkbox"
+	}]
+}
